@@ -1,3 +1,5 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -21,12 +23,7 @@
             , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
-};
 
-#include <dt-bindings/zmk/matrix_transform.h>
-
-/ {
-    /* define kscan node with label `kscan0`... */
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
@@ -44,6 +41,4 @@ RC(2,0) RC(2,1) RC(2,2)
 RC(3,0) RC(3,1) RC(3,2)
 >;
     };
-
-    /* potentially other overlay nodes... */
 };
